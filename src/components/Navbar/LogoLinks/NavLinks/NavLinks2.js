@@ -47,11 +47,11 @@ const StyledNavLinks = styled.ul`
 `
 const NavLinks = ({ links }) => {
 	return (
-		<StyledNavLinks className="hidden lg:flex lg:justify-center lg:flex-col  w-full text-white">
+		<StyledNavLinks className="hidden lg:flex lg:justify-center  w-full text-white">
 			{links.map((link, i) => (
 				<li
 					key={i}
-					className="uppercase font-medium px-4 whitespace-nowrap flex lg:flex-col items-center gap-8 lg:gap-1 "
+					className="uppercase font-medium px-4 whitespace-nowrap flex items-center gap-8 "
 				>
 					<span className="w-full">{link.name}</span>
 					{i !== 4 && (

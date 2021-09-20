@@ -27,7 +27,7 @@ const Socials = ({ justify }) => {
 	return (
 		<StyledSocials
 			justify={justify}
-			className="hidden lg:flex lg:flex-col  items-center gap-4  h-full"
+			className="hidden lg:flex  items-center gap-4  h-full"
 		>
 			<TiSocialFacebook />
 			<TiSocialInstagram />

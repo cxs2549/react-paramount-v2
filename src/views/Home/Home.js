@@ -13,17 +13,14 @@ const StyledHome = styled.div`
 overflow: hidden;
 position: relative;
 min-width: 100%;
-/* min-height: 600px; */
+height: 300vh;
 z-index: 0;
-.react-slideshow-container {
-	/* max-width: 85%; */
-	/* margin-left: auto; */
-}
+
 	.indicators {
 		display: flex;
 		gap: .75rem;
 		z-index: 10;
-		transform: translateY(-1rem);
+		transform: translateY(-2.75rem);
 	}
 	.indicator {
 		cursor: pointer;
@@ -59,14 +56,14 @@ const properties = {
 	prevArrow: (
 		<div
 			style={{ fontSize: '50px', marginRight: "-50px" }}
-			className="bg-gray-400 opacity-70 rounded flex items-center justify-center transform translate-x-4"
+			className="bg-gray-400 opacity-70 rounded flex items-center justify-center transform translate-x-4 "
 		>
 			<GrFormPrevious />
 		</div>
 	),
 	nextArrow: (
 		<div
-			className="bg-gray-400  opacity-70 rounded flex items-center justify-center transform -translate-x-4"
+			className="bg-gray-400  opacity-70 rounded flex items-center justify-center transform -translate-x-4 "
 			style={{ fontSize: '50px', marginLeft: '-50px'}}
 		>
 			<GrFormNext />
@@ -111,8 +108,8 @@ const heroes = [
 
 const Home = () => {
 	return (
-		<StyledHome>
-			<Fade indicators {...properties}>
+		<StyledHome id="home">
+			<Fade indicators {...properties} id="slideshow">
 				{heroes.map((hero, i) => (
 					<Hero
 						key={i}

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import logo from '../../../assets/logo-2.png'
-import Socials from '../Socials/Socials'
-import NavLinks from './NavLinks/NavLinks'
+import Socials2 from '../Socials/Socials2'
+import NavLinks2 from './NavLinks/NavLinks2'
 const StyledLogoLinks = styled.div``
 const LogoLinks = () => {
 	const links = [
@@ -13,10 +13,10 @@ const LogoLinks = () => {
 	]
 	return (
 		<StyledLogoLinks className=" w-full  items-center h-full">
-			<div className="flex lg:flex-col items-center justify-start  h-full lg:justify-around">
+			<div className="flex items-center justify-start  h-full lg:justify-between">
 				<img src={logo} className="filter brightness-0 invert w-40 " alt="" />
-				<NavLinks links={links} />
-				<Socials />
+				<NavLinks2 links={links} />
+				<Socials2 />
 			</div>
 		</StyledLogoLinks>
 	)

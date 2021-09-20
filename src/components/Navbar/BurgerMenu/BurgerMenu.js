@@ -5,7 +5,9 @@ import Menu from './Menu/Menu'
 import useOnClickOutside from 'use-onclickoutside'
 import Overlay from './Overlay/Overlay'
 
-const StyledBurger = styled.div``
+const StyledBurger = styled.div`
+color: white;
+`
 
 const BurgerMenu = () => {
 	const [ isOpen, setIsOpen ] = useState(false)
@@ -21,7 +23,7 @@ const BurgerMenu = () => {
 	const menuRef = useRef()
 	useOnClickOutside(menuRef, handleClose)
 	return (
-		<StyledBurger ref={menuRef} className="md:hidden">
+		<StyledBurger ref={menuRef} className="lg:hidden">
 			<Hamburger toggled={isOpen} toggle={handleOpen} />
 			<Menu open={isOpen} />
 			{isOpen && <Overlay close={handleClose} /> }
